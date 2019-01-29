@@ -138,9 +138,7 @@ class SearchPageState extends State<SearchPage> {
           ),
           onPressed: () {
             Navigator.of(context)
-                .pushReplacement(new MaterialPageRoute(builder: (context) {
-              return new SearchPage(value);
-            }));
+                .pushReplacement(new MaterialPageRoute(builder: (context) => new SearchPage(value)));
           }));
     }
   }

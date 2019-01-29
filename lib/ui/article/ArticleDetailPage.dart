@@ -31,17 +31,13 @@ class ArticleDetailPageState extends State<ArticleDetailPage> {
   @override
   void initState() {
     super.initState();
-    viewArticle();
+//    viewArticle();
     flutterWebViewPlugin.onStateChanged.listen((state) {
       if (state.type == WebViewState.finishLoad) {
         // 加载完成
-        setState(() {
-          isLoad = false;
-        });
+        setState(() => isLoad = false);
       } else if (state.type == WebViewState.startLoad) {
-        setState(() {
-          isLoad = true;
-        });
+        setState(() => isLoad = true);
       }
     });
   }
@@ -59,7 +55,7 @@ class ArticleDetailPageState extends State<ArticleDetailPage> {
       appBar: new AppBar(
         title: new Text(widget.title),
         bottom: new PreferredSize(
-            preferredSize: const Size.fromHeight(1.0),
+            preferredSize: const Size.fromHeight(0.5),
             child: isLoad
                 ? new LinearProgressIndicator()
                 : new Divider(
@@ -73,9 +69,9 @@ class ArticleDetailPageState extends State<ArticleDetailPage> {
     );
   }
 
-  void viewArticle() {
+/*  void viewArticle() {
     Map<String, String> map = new Map();
     map[Parms.ARTICLE_ID] = widget.article_id.toString();
     HttpUtil.post(Api.VIEW_ARTICLE, (data) {},params: map);
-  }
+  }*/
 }

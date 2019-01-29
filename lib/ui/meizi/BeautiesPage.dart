@@ -55,7 +55,7 @@ class BeautiesPageState extends State<BeautiesPage> {
             );
           }),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.pregnant_woman),
+        child: Icon(Icons.sync),
         onPressed: () {
           getMeizis();
         },

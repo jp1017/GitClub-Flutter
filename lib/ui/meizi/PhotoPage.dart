@@ -82,13 +82,13 @@ class PhotoPageState extends State<PhotoPage>
       //还原
       setState(() {
         _scale = 1.0;
-        _offset = Offset.fromDirection(0.5);
+//        _offset = Offset.fromDirection(0.5);
       });
     } else {
       //放大1.5
       setState(() {
         _scale = 1.5;
-        _offset = Offset.fromDirection(0.5);
+//        _offset = Offset.fromDirection(0.5);
       });
     }
   }
